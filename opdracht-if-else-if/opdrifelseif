@@ -1,22 +1,74 @@
 <?php
 
-	$getal = 25;
+	$getal = 15;
+	$bool = true;
 
 	//We moeten een restwaarde 0 hebben
 
-	if ( $getal >= 20 )
+	if (( $getal >= 0 ) && ( $getal <= 10 ))
 	{
+		$min = 0;
+		$max = 10;
 	}
 
-	elseif ()
+	elseif (( $getal >= 10 ) && ( $getal <= 20 ))
 	{
+		$min = 10;
+		$max = 20;
 	}
 
-	else ()
+	elseif (( $getal >= 20 ) && ( $getal <= 30 ))
 	{
-
+		$min = 20;
+		$max = 30;
 	}
 
+	elseif (( $getal >= 30 ) && ( $getal <= 40 ))
+	{
+		$min = 30;
+		$max = 40;
+	}
+
+	elseif (( $getal >= 40 ) && ( $getal <= 50 ))
+	{
+		$min = 40;
+		$max = 50;
+	}
+
+	elseif (( $getal >= 50 ) && ( $getal <= 60 ))
+	{
+		$min = 50;
+		$max = 60;
+	}
+
+	elseif (( $getal >= 60 ) && ( $getal <= 70 ))
+	{
+		$min = 60;
+		$max = 70;
+	}
+
+	elseif (( $getal >= 70 ) && ( $getal <= 80 ))
+	{
+		$min = 70;
+		$max = 80;
+	}
+
+	elseif (( $getal >= 80 ) && ( $getal <= 90 ))
+	{
+		$min = 80;
+		$max = 90;
+	}
+
+	elseif (( $getal >= 90 ) && ( $getal <= 100 ))
+	{
+		$min = 90;
+		$max = 100;
+	}
+
+	else 
+	{
+		$bool = false;
+	}
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +85,13 @@
 
 		<h1>Opdracht If Else if</h1>
 
-		<p>het getal ligt tussen <?= ?> en <?= ?></p>
+			<p>Het getal <?= $getal ?> ligt tussen <?= $min ?> en <?= $max ?></p>
+
+			<?php if ( $bool ): ?>
+				<p>Dit is true</p>
+			<?php else: ?>
+				<p>Dit is false</p>
+			<?php endif ?> 
 
 	</section>
 
